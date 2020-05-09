@@ -7,6 +7,10 @@ Use a simple TeX-like syntax to write expressions directly into your HTML.
 
 If \$ax^2+bx+c=0\$ with \$aâ‰ 0\$, then: \$\$x={-bÂ±âˆš{b^2-4ac}}/{2a}\$\$
 
+renders as:
+
+![Example expression](examples/example.png)
+
 <h2>Math rendering libraries</h2>
 
 <table border='1'>
