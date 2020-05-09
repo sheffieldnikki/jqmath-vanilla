@@ -11,7 +11,7 @@ produces the following:
 
 ![Example expression](examples/example.png)
 
-Vanilla jqMath is very lightweight, fast and concise. It is standards-based and cross-browser, using MathML when available, else simple HTML and CSS, and avoiding pixel-map images. Thus pages load quickly, and expressions can be resized by the user, or easily passed to screen reading, graphing, or computer algebra software.
+jqMath-vanilla is very lightweight, fast and concise. It is standards-based and cross-browser, using MathML when available, else simple HTML and CSS, and avoiding pixel-map images. Thus pages load quickly, and expressions can be resized by the user, or easily passed to screen reading, graphing, or computer algebra software.
 
 <h2>Math rendering libraries</h2>
 
