@@ -5,11 +5,11 @@ Forked from jqMath v0.4.6 (May-2016) which is copyright 2016, Mathscribe, Inc. a
 jqMath makes it easy to put formatted mathematical expressions in web pages. 
 Use a simple TeX-like syntax to write expressions directly into your HTML. e.g.,
 
-<blockquote>If $ax^2+bx+c=0$ with $a≠0$, then: $$x={-b±√{b^2-4ac}}/{2a}$$</blockquote>
+`If $ax^2+bx+c=0$ with $a≠0$, then: $$x={-b±√{b^2-4ac}}/{2a}$$`
 
 produces the following:
 
-<blockquote>![Example expression](examples/example.png)</blockquote>
+![Example expression](examples/example.png)
 
 Vanilla jqMath is very lightweight, fast and concise. It is standards-based and cross-browser, using MathML when available, else simple HTML and CSS, and avoiding pixel-map images. Thus pages load quickly, and expressions can be resized by the user, or easily passed to screen reading, graphing, or computer algebra software.
 
