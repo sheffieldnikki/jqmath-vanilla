@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<link rel="stylesheet" href="author.css">
+	
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body)"></script>
+	
+	<title>KaTeX - examples page</title>
+	
+	<style>
+		#mathSrc1	{ font-size: larger; vertical-align: text-bottom }
+  </style>
+</head>
+<body>
+
+<h1>KaTeX - examples page</h1>
+
+<p><i>This page requires 14 HTTP requests, 215.7kB transferred, first load in 1.67s, cached load 1.19s<br />
+(<a href='https://katex.org/' target='_blank'>KaTeX</a> v0.11.1 instead of jqMath, no dependencies)</i></p>
+
+<p>KaTeX is a JavaScript module that makes it easy to put formatted
+mathematical expressions in web pages. For example, the html source:</p>
+
+<blockquote>If <code>\(ax^2+bx+c=0\)</code> with <code>\(a≠0\)</code>, then: <code>$$x=\frac{-b±\sqrt{b^2-4ac}}{2a}$$</code></blockquote>
+
+<p>produces the following:</p>
+
+<blockquote>If \(ax^2+bx+c=0\) with \(a≠0\), then: $$x=\frac{-b±\sqrt{b^2-4ac}}{2a}$$</blockquote>
+
+<p>KaTeX uses TeX syntax:</p>
+
+<ul>
+	<li><code class="special">\(</code> and
+		<code class="special">\)</code>, to delimit inline mathematics</li>
+	<li><code class="special">$$</code>, or <code class="special">\[</code> and
+		<code class="special">\]</code>, to delimit block or “display” mathematics</li>
+	<li><code class="special">^</code> for superscript</li>
+	<li><code class="special">_</code> for subscript</li>
+	<li><code class="special">{</code> and <code class="special">}</code> for grouping</li>
+	<li><code class="special">\overset</code> for overscript</li>
+	<li><code class="special">\underset</code> for underscript</li>
+	<li><code class="special">\</code> or <code class="special">`</code> to quote the next
+		character (turning off its special meaning), start a macro or multi-letter name</li>
+	<li><code class="special">\mathrm</code> to make a name non-italic</li>
+	<li><code class="special">\bf</code>, <code class="special">\it</code>, or
+		<code class="special">\bm</code> for a bold, italic, or bold-italic variable</li>
+	<li><code class="special">\frak</code> for a Fraktur letter</li>
+	<li><code class="special">\overline</code> for an overbar</li>
+	<li><code class="special">\begin</code> for a matrix, table, or simply tabular alignment -
+		separate entries with <code class="special">&</code> and rows with
+		<code class="special">//</code></li>
+	<li><code class="special">\text</code> for plain text
+		inside mathematics - specify the text inside {}</li>
+	<li>spaces, tabs and newlines are ignored - KaTeX formats the mathematics</li>
+	<li>you can use <code class="special">\$</code> for a real \$, or
+		<code class="special">\\</code> for a \ if necessary</li>
+</ul>
+
+<p>KaTeX is mediumweight, fast and complete.  It is standards-based and cross-browser, using simple HTML and CSS for visual rendering and includes MathML for accessibility.  Thus pages load
+quickly, and expressions can be resized by the user, or easily passed to screen reading,
+graphing, or computer algebra software.</p>
+
+<div>More examples:</div>
+
+<table class="center ruled"><thead><tr><th>HTML Source</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td><code>$$y-y_0=m(x-x_0)$$</code></td>
+    <td>$$y-y_0=m(x-x_0)$$</td></tr>
+
+<tr><td><code>$$\cos^2θ+\sin^2θ=1$$</code></td>
+    <td>$$\cos^2θ+\sin^2θ=1$$</td></tr>
+
+<tr><td><code>$$\sum^n_{i=0}i=\frac{n(n+1)}{2}$$</code></td>
+    <td>$$\sum^n_{i=0}i=\frac{n(n+1)}{2}$$</td></tr>
+    
+<tr><td><code>$$\frac{1+\sqrt{5}}{2}=1+\frac{1}{1+\frac{1}{1+⋯}}$$</code></td>
+    <td>$$\frac{1+\sqrt{5}}{2}=1+\frac{1}{1+\frac{1}{1+⋯}}$$</td></tr>
+
+<tr><td><code>$$f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}$$</code></td>
+    <td>$$f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}$$</td></tr>
+
+<tr><td><code>\[∀x_0∀ε>0∃δ>0∋{|x-x_0|}&amp;lt;δ⇒{|f(x)-f(x_0)|}&amp;lt;ε\]</code></td>
+    <td>\[∀x_0∀ε>0∃δ>0∋{|x-x_0|}&lt;δ⇒{|f(x)-f(x_0)|}&lt;ε\]</td></tr>
+
+<tr><td><code>\[\int_Δd\:\boldsymbol{ω}=\int_{∂Δ}\boldsymbol{ω}\]</code></td>
+    <td>\[\int_Δd\:\boldsymbol{ω}=\int_{∂Δ}\boldsymbol{ω}\]</td></tr>
+
+<tr><td><code>\(\begin{pmatrix}\cos θ& - \sin θ\\ \sin θ& \cos θ\end{pmatrix}\) gives a rotation by \(θ\).</code></td>
+    <td>\(\begin{pmatrix}\cos θ& - \sin θ\\ \sin θ& \cos θ\end{pmatrix}\) gives a rotation by \(θ\).</td></tr>
+
+<tr><td><code>\(\overset{→}{v}⋅\overset{→}{w} = vw\cos θ\)</code></td>
+    <td>\(\overset{→}{v}⋅\overset{→}{w} = vw\cos θ\)</td></tr>
+
+<tr><td><code>\(\{x:x^2∈ℚ\}\) has measure 0 in \(ℝ\).</code></td>
+    <td>\(\{x:x^2∈ℚ\}\) has measure 0 in \(ℝ\).</td></tr>
+
+<tr><td><code>\(U=\bigcup_αU_α⇒0→ \frak F(U)→\prod_α \frak F(U_α)\overset{-}{→}\prod_{α,β} \frak F(U_α∩U_β)\) is exact.</code></td>
+    <td>\(U=\bigcup_αU_α⇒0→ \frak F(U)→\prod_α \frak F(U_α)\overset{-}{→}\prod_{α,β} \frak F(U_α∩U_β)\) is exact.</td></tr>
+
+<tr><td><code>\[\frac{1}{7} = 0.\overline{142857}\]</code></td>
+    <td>\[\frac{1}{7} = 0.\overline{142857}\]</td></tr>
+
+<tr><td><code>\[\sqrt[n]{a}\sqrt[n]{b} = \sqrt[n]{ab}\]</code></td>
+    <td>\[\sqrt[n]{a}\sqrt[n]{b} = \sqrt[n]{ab}\]</td></tr>
+
+<tr><td><code>\[\begin{aligned} a &= b+c \\ &= d\end{aligned}\]</code></td>
+    <td>\[\begin{aligned} a &= b+c \\ &= d\end{aligned}\]</td></tr>
+
+<tr><td><code>\[\text{average speed}= \frac{\text{distance traveled}}{\text{elapsed time}}\]</code></td>
+    <td>\[\text{average speed}= \frac{\text{distance traveled}}{\text{elapsed time}}\]</td></tr>
+
+<tr><td><code>\[y = ax^\html'&amp;lt;input type="text" size=1>'+bx+c\] (inside a trusted source)</code></td>
+    <td><i class='special'>not supported</i></td></tr>
+
+<tr><td><code>\[\begin{matrix} x_0^2 & {_0F_1(; a; z)} & R_{i^jkl} \end{matrix}\]</code></td>
+    <td>\[\begin{matrix} x_0^2 & {_0F_1(; a; z)} & R_{i^jkl} \end{matrix}\]</td></tr>
+
+<tr><td><code>$$[\mathrm{OH}^{-}]=\frac{K_\mathrm{W}}{[\mathrm{H}^{+}]}$$</code></td>
+    <td>$$[\mathrm{OH}^{-}]=\frac{K_\mathrm{W}}{[\mathrm{H}^{+}]}$$</td></tr>
+
+<tr><td><code>$$</code><textarea id="mathSrc1" onkeyup='doMathSrc(1)' onmouseup='doMathSrc(1)' rows=2 cols=30></textarea><code>$$</code></td>
+    <td id="mathTgt1"></td></tr>
+</tbody>
+</table>
+
+<p>The last row above is for you to experiment.</p>
+
+<p><i>&raquo; <a href='index.html'>Math Libraries</a></i></p>
+
+<script>
+function doMathSrc(n) {
+  var t = document.getElementById('mathSrc'+n).value;
+	var tgtE = document.getElementById('mathTgt'+n);
+  katex.render(t, tgtE, {
+    throwOnError: false
+  });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+<head>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="../jqmath-0.4.3.min.css">
+<style>
+.left	{float:left; margin-right:8px}
+.middle	{vertical-align:middle}
+TABLE.center {margin-left:auto; margin-right:auto}
+BLOCKQUOTE,P {margin-top:1em; margin-bottom:1em} /* from HTML5 defaults */
+TABLE.ruled	{border-collapse:collapse; text-align:center}
+.ruled > * > TR > TH, .ruled > * > TR > TD {border:solid thin; padding:0.2em 0.3em; min-width:1.5em}
+.ruled > THEAD, .ruled > TBODY, .ruled > TFOOT, .ruled > COLGROUP {border:double}
+.ma-block	{margin-top:1em; margin-bottom:1em}
+.ma-block:first-child	{margin-top:0; margin-bottom:0}
+FMATH INPUT, .fm-math INPUT, MATH INPUT {margin-top:2px; margin-bottom:2px}	/* @@ move to jqmath.css? */
+BODY {background-color:ghostwhite}
+THEAD, TBODY, TFOOT, TR, TH, TD	{border-color:black /* for IE6-7 */}
+.no-meta {color:blue}
+.special {color:red}
+H1, H2, H3, H4, H5, H6 {text-align:center; background-color:lightsteelblue}
+#mathSrc1 {font-size:larger; vertical-align:text-bottom}
+
+@media only screen and (max-device-width:1024px) {	
+/*@@ move part to jqmath-0.4.5.css */
+BODY, /* MATH, buggy on ios 8.1 */ FMATH, .fm-math, MN, MI, MTEXT {font-family:Helvetica,sans-serif}
+}
+</style>
+
+<!--[if lte IE 8]>
+<script type='text/javascript' src='//polyfill.io/v3/polyfill.min.js?features=Function.prototype.bind%2CString.prototype.trim%2CObject.keys%2CDate.now%2CArray.isArray'></script>
+<![endif]-->
+<script src="../jqmath-vanilla.min.js"></script>
+<script>M.MathPlayer = false; M.trustHtml = true;</script>
+
+<title>Vanilla jqMath - examples page</title>
+</head>
+<body>
+
+<h1>Vanilla jqMath - examples page</h1>
+
+<p><i>This page requires 3 HTTP requests, 18.3kB transferred, first load in 0.54s, cached load 0.47s<br />
+(Pure JavaScript without jQuery or other libraries, minify library CSS, inlined minimal 
+page CSS, stripped jscurry, demand-loads Fraktur font, IE9+)</i></p>
+
+<p>Vanilla jqMath is a JavaScript module that makes it easy to put formatted
+mathematical expressions in web pages. For example, the html source:</p>
+
+<blockquote>If \$ax^2+bx+c=0\$ with \$a≠0\$, then: \$\$x={-b±√{b^2-4ac}}/{2a}\$\$</blockquote>
+
+<p>produces the following:</p>
+
+<blockquote>If $ax^2+bx+c=0$ with $a≠0$, then: $$x={-b±√{b^2-4ac}}/{2a}$$</blockquote>
+
+<p>jqMath uses a simple TeX-like syntax, with MathML semantics:</p>
+
+<ul>
+	<li><span class="special">\$</span>, or <span class="special">\\(</span> and
+		<span class="special">\\)</span>, to delimit inline mathematics</li>
+	<li><span class="special">\$\$</span>, or <span class="special">\\[</span> and
+		<span class="special">\\]</span>, to delimit block or “display” mathematics</li>
+	<li><span class="special">^</span> for superscript</li>
+	<li><span class="special">_</span> for subscript</li>
+	<li><span class="special">{</span> and <span class="special">}</span> for grouping</li>
+	<li><span class="special">↖</span> for overscript</li>
+	<li><span class="special">↙</span> for underscript</li>
+	<li><span class="special">\</span> or <span class="special">`</span> to quote the next
+		character (turning off its special meaning), start a macro or multi-letter name, or
+		make a name non-italic</li>
+	<li><span class="special">\bo</span>, <span class="special">\it</span>, or
+		<span class="special">\bi</span> for a bold, italic, or bold-italic variable</li>
+	<li><span class="special">\sc</span> or <span class="special">\fr</span> for a script or
+		Fraktur letter</li>
+	<li><span class="special">\ov</span> for an overbar</li>
+	<li><span class="special">\table</span> for a matrix, table, or simply tabular alignment -
+		separate entries with <span class="special">,</span> and rows with
+		<span class="special">;</span></li>
+	<li><span class="special">\text</span> or <span class="special">\html</span> for plain text
+		or html inside mathematics - specify the text or html inside quotes (note \html only
+		works inside a trusted source)</li>
+	<li>spaces, tabs and newlines are ignored - jqMath formats the mathematics</li>
+	<li>you can use <span class="special">\\\$</span> for a real \$, or
+		<span class="special">\\\\</span> for a \\ if necessary</li>
+</ul>
+
+<p>Vanilla jqMath is very lightweight, fast and concise.  It is standards-based and 
+cross-browser, using MathML when available, else simple HTML and CSS, and avoiding pixel-map 
+images.  Thus pages load quickly, and expressions can be resized by the user, or easily 
+passed to screen reading, graphing, or computer algebra software.</p>
+
+<div>More examples:</div>
+
+<table class="center ruled"><thead><tr><th>HTML Source</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>\$\$y-y_0=m(x-x_0)\$\$<td>$$y-y_0=m(x-x_0)$$</td></tr>
+
+<tr><td>\$\$\cos^2θ+\sin^2θ=1\$\$</td>
+		<td>$$\cos^2θ+\sin^2θ=1$$</td></tr>
+
+<tr><td>\$\$∑↙{i=0}↖n i={n(n+1)}/2\$\$</td>
+		<td>$$∑↙{i=0}↖n i={n(n+1)}/2$$</td></tr>
+
+<tr><td>\$\${1+√5}/2=1+1/{1+1/{1+⋯}}\$\$</td>
+		<td>$${1+√5}/2=1+1/{1+1/{1+⋯}}$$</td></tr>
+
+<tr><td>\$\$f'(x)=\lim↙{h→0}{f(x+h)-f(x)}/h\$\$</td>
+		<td>$$f'(x)=\lim↙{h→0}{f(x+h)-f(x)}/h$$</td></tr>
+
+<tr><td>\\[∀x_0∀ε>0∃δ>0∋{|x-x_0|}&amp;lt;δ⇒{|f(x)-f(x_0)|}&amp;lt;ε\\]</td>
+		<td>\[∀x_0∀ε>0∃δ>0∋{|x-x_0|}&lt;δ⇒{|f(x)-f(x_0)|}&lt;ε\]</td></tr>
+
+<tr><td>\\[∫_\Δd\bo ω=∫_{∂\Δ}\bo ω\\]</td>
+		<td>\[∫_\Δd\bo ω=∫_{∂\Δ}\bo ω\]</td></tr>
+
+<tr><td>\$(\table \cos θ, - \sin θ; \sin θ, \cos θ)\$ gives a rotation by \$θ\$.</td>
+		<td>$(\table \cos θ, - \sin θ; \sin θ, \cos θ)$ gives a rotation by $θ$.</td></tr>
+
+<tr><td>\$v↖{→}⋅w↖{→} = vw\cos θ\$</td>
+		<td>$v↖{→}⋅w↖{→} = vw\cos θ$</td></tr>
+
+<tr><td>\$\{x:x^2∈\ℚ\}\$ has measure 0 in \$\ℝ\$.</td>
+		<td>$\{x:x^2∈\ℚ\}$ has measure 0 in $\ℝ$.</td></tr>
+
+<tr><td>\\(U=⋃↙αU_α⇒0→\fr F(U)→∏↙α\fr F(U_α)→↖{-}∏↙{α,β}\fr F(U_α∩U_β)\\) is exact.</td>
+		<td>\(U=⋃↙αU_α⇒0→\fr F(U)→∏↙α\fr F(U_α)→↖{-}∏↙{α,β}\fr F(U_α∩U_β)\) is exact.</td></tr>
+
+<tr><td>\\[1/7 = 0.\ov 142857\\]<td>\[1/7 = 0.\ov 142857\]</td></tr>
+
+<tr><td>\\[√^n{a}√^n{b} = √^n{ab}\\]</td>
+		<td>\[√^n{a}√^n{b} = √^n{ab}\]</td></tr>
+
+<tr><td>\\[\table a, =, b+c; , =, d\\]</td>
+		<td>\[\table a, =, b+c; , =, d\]</td></tr>
+
+<tr><td>\\[\text"average speed" = \text"distance traveled" / \text"elapsed time"\\]</td>
+		<td>\[\text"average speed" = \text"distance traveled" / \text"elapsed time"\]</td></tr>
+
+<tr><td>\\[y = ax^\html'&amp;lt;input type="text" size=1>'+bx+c\\] (inside a trusted source)</td>
+		<td>\[y = ax^\html'&lt;input type="text" size=1>'+bx+c\] (inside a trusted source)</td></tr>
+
+<tr><td>\\[\table x_0^2, {_0F_1(; a; z)}, R_i_^j_k_l\\]</td>
+		<td>\[\table x_0^2, {_0F_1(; a; z)}, R_i_^j_k_l\]</td></tr>
+
+<tr><td>\$\$[\O\H^{-}]=K_\W/[\H^{+}]\$\$</td>
+		<td>$$[\O\H^{-}]=K_\W/[\H^{+}]$$</td></tr>
+
+<tr><td>\$\$<textarea id="mathSrc1" onkeyup='doMathSrc(this,1)' onmouseup='doMathSrc(this,1)' rows=2 cols=30></textarea>\$\$</td>
+		<td id="mathTgt1"></td></tr>
+</tbody>
+</table>
+
+<p>The last row above is for you to experiment.</p>
+
+<p><i>&raquo; <a href='index.html'>Math Libraries</a></i></p>
+
+<script>
+"use strict";
+
+var ents_ = {nwarr:'\u2196', swarr:'\u2199'};
+function doMathSrc(srcE, n) {
+	M.trustHtml = false;
+	var ms = srcE.value.replace(/&([-#.\w]+);|\\([a-z]+)(?: |(?=[^a-z]))/ig, function(s, e, m) {
+		if (m && (M.macros_[m] || M.macro1s_[m]))	return s;	// e.g. \it or \sc
+		var t = '&'+(e || m)+';', span = document.createElement('span'), res;
+		span.innerHTML = t;
+		res = span.textContent || span.innerText;
+		//jQuery: res = $('<span>'+t+'</span>').text();
+		return res != t ? res : ents_[e || m] || s;
+	}), h = ms.replace(/</g, '&lt;');
+	if (srcE.value != h) srcE.value = h;	// assignment may clear insertion point
+
+	var t, e = document.getElementById('mathTgt'+n);
+	try {
+		t = M.sToMathE(ms, true);
+		e.innerHTML = '';
+		e.appendChild(t);
+	} catch(exc) {
+		e.innerHTML = String(exc);
+	}
+	//jQuery: $('#mathTgt'+n).empty().append(t);
+}
+
+// Demand-load Fractur letters font, only if a non-MathML browser
+// (can be removed if your math doesn't uses Fractur letters)
+window.onload = function(){
+	if (M.parseMathQ && !M.MathML) {
+		var link = document.createElement("link")
+		link.setAttribute("rel", "stylesheet")
+		link.setAttribute("type", "text/css")
+		link.setAttribute("href", "https://fonts.googleapis.com/css?family=UnifrakturMaguntia")
+		document.getElementsByTagName("head")[0].appendChild(link)
+	}
+}
+</script>
+</body>
+</html>

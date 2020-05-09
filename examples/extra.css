@@ -1,0 +1,51 @@
+.hide				{ display: none }
+
+.nowrap				{ white-space: nowrap }
+
+.inline-block		{ display: inline-block }
+
+.left				{ float: left; margin-right: 8px }
+.right				{ float: right; margin-left: 8px }
+.clear				{ clear: both }
+
+.left-text			{ text-align: left }
+.center-text		{ text-align: center }
+.right-text			{ text-align: right }
+.top-align			{ vertical-align: top }
+.middle				{ vertical-align: middle }
+.baseline			{ vertical-align: baseline }
+.center-block, table.center
+					{ margin-left: auto; margin-right: auto }
+
+.rotate-left		{ -ms-transform-origin: 0 0; -moz-transform-origin: 0 0;
+						-webkit-transform-origin: 0 0; transform-origin: 0 0;
+						-ms-transform: rotate(-90deg); -moz-transform: rotate(-90deg);
+						-webkit-transform: rotate(-90deg); transform: rotate(-90deg) }
+
+blockquote, figure, p, pre, .p-margins
+					{ margin-top: 1em; margin-bottom: 1em }	/* from HTML5 defaults */
+.p-top				{ margin-top: 1em }
+.p-bottom			{ margin-bottom: 1em }
+
+table.ruled			{ border-collapse: collapse; text-align: center }
+.ruled > * > tr > th, .ruled > * > tr > td
+					{ border: solid thin; padding: 0.2em 0.3em; min-width: 1.5em }
+.ruled > thead, .ruled > tbody, .ruled > tfoot, .ruled > colgroup
+					{ border: double }
+
+table.join-align > tbody > tr > td:first-child
+					{ text-align: right }
+table.join-align > tbody > tr > td:first-child + td
+					{ text-align: left }
+
+.ma-block			{ margin-top: 1em; margin-bottom: 1em }
+.ma-block:first-child	{ margin-top: 0; margin-bottom: 0 }
+
+
+@media only screen and (max-device-width: 1024px) {	/*@@ move part to jqmath-0.4.5.css */
+	body, /* math, buggy on ios 8.1 */ fmath, .fm-math, mn, mi, mtext
+						{ font-family: Helvetica, sans-serif }
+}
+
+fmath input, .fm-math input, math input
+					{ margin-top: 2px; margin-bottom: 2px }	/* @@ move to jqmath.css? */

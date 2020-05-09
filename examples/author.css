@@ -1,0 +1,10 @@
+@import url("extra.css?12");
+
+body				{ background-color: ghostwhite }
+thead, tbody, tfoot, tr, th, td	{ border-color: black /* for IE6-7 */ }
+
+.no-meta			{ color: blue }
+.no-html			{ color: limegreen }
+.special			{ color: red }
+
+h1, h2, h3, h4, h5, h6	{ text-align: center; background-color: lightsteelblue }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Rendering Math on the web</title>	
+<style>
+THEAD {background-color:#ddd}
+TH,TD {padding:4px 8px}
+TD {text-align:center}
+TD:first-of-type,TD:last-of-type {text-align:left}
+H1, H2, H3, H4, H5, H6 {text-align:center; background-color:lightsteelblue}
+.bad {background-color:#fcc}
+.good {background-color:#cfc}
+</style>
+</head>
+<body>
+
+<h1>Rendering Math on the web</h1>
+
+Native <a href='https://caniuse.com/#feat=mathml' target='_blank'>MathML support is only included</a> in Firefox 4+, iOS Safari 5+ and Mac Safari 10+, so typically JavaScript libraries are used to render mathematical equations / expressions cross-browser:
+<p>
+<table border='1'>
+<thead><tr><th>Math Library</th><th>Release</th><th>Example page</th><th>HTTP<br/>requests</th><th>Transfer<br/>kB</th><th>First<br/>load</th><th>Cached<br/>load</th><th>Browser support</th></tr></thead>
+<tbody>
+<tr><td><b>Vanilla jqMath</b></td><td><i>n/a</i><br/>May-2020</td><td>[<a href='jqmath-vanilla.html'>example page</a>]</td>
+    <td class='good'>3</td><td class='good'>&nbsp;18.3</td><td class='good'>0.54s</td><td class='good'>0.47s</td><td>IE9+, Edge, FF?, Chrome ?, Safari ?, Opera ?</td></tr>
+<tr><td><b><a href='https://mathscribe.com/author/jqmath.html' target='_blank' title='jqMath homepage'>jqMath with jQuery</a></b></td><td>v0.4.6<br/>May-2016</td><td>[<a href='jqmath-jquery.html'>example page</a>]</td>
+    <td>8</td><td>&nbsp;81.9</td><td>1.03s</td><td>0.90s</td><td>IE6+, FF2+, Chrome, Safari 3+, Opera 9+</td></tr>
+<tr><td><b><a href='https://katex.org/' target='_blank' title='KaTeX homepage'>KaTeX</a></b><sup>1</sup></td><td>v0.11.1<br/>Sep-2019</td><td>[<a href='katex.html'>example page</a>]</td>
+    <td class='bad'>14</td><td class='bad'>215.7</td><td>1.67s</td><td>1.19s</td><td>IE9+, Edge, FF?, Chrome ?, Safari ?, Opera ?</td></tr>
+<tr><td><b><a href='https://www.mathjax.org/' target='_blank' title='MathJax homepage'>MathJax with polyfill</a></b><sup>2</sup></td><td>v3.0.5<br/>Mar-2020</td><td>[<a href='mathjax.html'>example page</a>]</td>
+    <td class='bad'>15</td><td class='bad'>291.6</td><td class='bad'>3.67s</td><td class='bad'>2.66s</td><td>IE11+, Edge, FF38+, Chrome 29+, Safari 9+, Opera 33+, iOS 9+, Android 4+</td></tr>
+</tbody>
+</table>
+<p>
+The download transfer size &amp; load <i>time-until-idle</i> of each example page was performed with FF76 on a desktop PC.<br/>
+<sup>1</sup>KaTeX can alternatively be run server-side for compatibility with <u>all</u> browsers<br/>
+<sup>2</sup>MathJax v2.x supports older browsers including IE6-10
+<p>
+This <a href="https://www.intmath.com/cg5/katex-mathjax-comparison.php">KaTeX and MathJax Comparison Demo</a> by Murray Bourne is useful, with processing &amp; loading times.
+<p>
+<i>Page last updated May-2020.</i>
+</body>
+</html>
