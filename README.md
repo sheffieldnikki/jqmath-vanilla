@@ -17,6 +17,9 @@ If \$ax^2+bx+c=0\$ with \$aâ‰ 0\$, then: \$\$x={-bÂ±âˆš{b^2-4ac}}/{2a}\
 <tr><td><b><a href='https://katex.org/' target='_blank' title='KaTeX homepage'>KaTeX</a></b><sup>1</sup></td><td>v0.11.1<br/>Sep-2019</td><td>[<a href='katex.html'>example page</a>]</td>
     <td class='bad'>14</td><td class='bad'>215.7</td><td>1.67s</td><td>1.19s</td><td>IE9+, Edge, FF?, Chrome ?, Safari ?, Opera ?</td></tr>
 <tr><td><b><a href='https://www.mathjax.org/' target='_blank' title='MathJax homepage'>MathJax with polyfill</a></b><sup>2</sup></td><td>v3.0.5<br/>Mar-2020</td><td>[<a href='mathjax.html'>example page</a>]</td>
-    <td class='bad'>15</td><td class='bad'>291.6</td><td class='bad'>3.67s</td><td class='bad'>2.66s</td><td>IE11+, Edge, FF38+, Chrome 29+, Safari 9+, Opera 33+, iOS 9+, Android 4+</td></tr>
+    <td class='bad'>15</td><td style='background-color:#fcc'>291.6</td><td class='bad'>3.67s</td><td class='bad'>2.66s</td><td>IE11+, Edge, FF38+, Chrome 29+, Safari 9+, Opera 33+, iOS 9+, Android 4+</td></tr>
 </tbody>
 </table>
+The download transfer size &amp; load <i>time-until-idle</i> of each example page was performed with FF76 on a desktop PC.<br/>
+<sup>1</sup>KaTeX can alternatively be run server-side for compatibility with <u>all</u> browsers<br/>
+<sup>2</sup>MathJax v2.x supports older browsers including IE6-10
