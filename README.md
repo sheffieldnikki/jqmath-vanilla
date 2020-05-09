@@ -12,7 +12,7 @@ If \$ax^2+bx+c=0\$ with \$aâ‰ 0\$, then: \$\$x={-bÂ±âˆš{b^2-4ac}}/{2a}\
 <table border='1'>
 <thead><tr><th>Math Library</th><th>Release</th><th>HTTP<br/>requests</th><th>Transfer<br/>kB</th><th>First<br/>load</th><th>Cached<br/>load</th><th>Browser support</th></tr></thead>
 <tbody>
-<tr><td><b>Vanilla jqMath</b></td><td><i>n/a</i><br/>May-2020</td><td>[<a href='examples/jqmath-vanilla.html'>example page</a>]</td>
+<tr><td><b>Vanilla jqMath</b></td><td><i>n/a</i><br/>May-2020</td>
     <td>3</td><td>&nbsp;18.3</td><td>0.54s</td><td>0.47s</td><td>IE9+, Edge, FF?, Chrome ?, Safari ?, Opera ?</td></tr>
 <tr><td><b><a href='https://mathscribe.com/author/jqmath.html' target='_blank' title='jqMath homepage'>jqMath with jQuery</a></b></td><td>v0.4.6<br/>May-2016</td>
     <td>8</td><td>&nbsp;81.9</td><td>1.03s</td><td>0.90s</td><td>IE6+, FF2+, Chrome, Safari 3+, Opera 9+</td></tr>
