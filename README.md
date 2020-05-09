@@ -22,6 +22,6 @@ If \$ax^2+bx+c=0\$ with \$aâ‰ 0\$, then: \$\$x={-bÂ±âˆš{b^2-4ac}}/{2a}\
     <td>15</td><td>291.6</td><td>3.67s</td><td>2.66s</td><td>IE11+, Edge, FF38+, Chrome 29+, Safari 9+, Opera 33+, iOS 9+, Android 4+</td></tr>
 </tbody>
 </table>
-The download transfer size &amp; load <i>time-until-idle</i> of each <code>/examples/</code> page was performed with FF76 on a desktop PC.<br/>
+The download transfer size &amp; load <i>time-until-idle</i> of each page in <code>/examples/</code> was performed with FF76 on a desktop PC.<br/>
 <sup>1</sup>KaTeX can alternatively be run server-side for compatibility with <u>all</u> browsers<br/>
 <sup>2</sup>MathJax v2.x supports older browsers including IE6-10
