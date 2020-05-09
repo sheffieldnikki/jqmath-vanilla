@@ -1,6 +1,6 @@
 # jqmath-vanilla
 Pure JavaScript version of jqMath math rendering library, so doesn't require jQuery. 
-Forked from jqMath v0.4.6 (May-2016) which is copyright 2016, Mathscribe, Inc. Released under the MIT license.
+Forked from jqMath v0.4.6 (May-2016) which is copyright 2016, Mathscribe, Inc. and released under the MIT license.
 
 jqMath makes it easy to put formatted mathematical expressions in web pages. 
 Use a simple TeX-like syntax to write expressions directly into your HTML. eg,
