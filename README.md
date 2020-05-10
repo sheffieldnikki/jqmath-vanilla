@@ -18,13 +18,13 @@ jqMath-vanilla is very lightweight, fast and concise. It is standards-based and 
 <table border='1'>
 <thead><tr><th>Math Library</th><th>Release</th><th>HTTP<br/>requests</th><th>Transfer<br/>kB</th><th>First<br/>load</th><th>Cached<br/>load</th><th>Browser support</th></tr></thead>
 <tbody>
-<tr><td><b>jqMath vanilla</b></td><td><i>n/a</i><br/>May-2020</td>
+<tr><td><b>jqMath vanilla</b><br/>[<a href='https://sheffieldnick.github.io/jqmath-vanilla/examples/jqmath-vanilla.html'>example page</a>]</td><td><i>n/a</i><br/>May-2020</td>
     <td>3</td><td>&nbsp;18.3</td><td>0.54s</td><td>0.47s</td><td>IE9+, Edge, FF?, Chrome ?, Safari ?, Opera ?</td></tr>
-<tr><td><b><a href='https://mathscribe.com/author/jqmath.html' target='_blank' title='jqMath homepage'>jqMath+jQuery</a></b></td><td>v0.4.6<br/>May-2016</td>
+<tr><td><b><a href='https://mathscribe.com/author/jqmath.html' target='_blank' title='jqMath homepage'>jqMath+jQuery</a></b><br/>[<a href='https://sheffieldnick.github.io/jqmath-vanilla/examples/jqmath-jquery.html'>example page</a>]</td><td>v0.4.6<br/>May-2016</td>
     <td>8</td><td>&nbsp;81.9</td><td>1.03s</td><td>0.90s</td><td>IE6+, FF2+, Chrome, Safari 3+, Opera 9+</td></tr>
-<tr><td><b><a href='https://katex.org/' target='_blank' title='KaTeX homepage'>KaTeX</a></b><sup>1</sup></td><td>v0.11.1<br/>Sep-2019</td>
+<tr><td><b><a href='https://katex.org/' target='_blank' title='KaTeX homepage'>KaTeX</a></b><sup>1</sup><br/>[<a href='https://sheffieldnick.github.io/jqmath-vanilla/examples/katex.html'>example page</a>]</td><td>v0.11.1<br/>Sep-2019</td>
     <td>14</td><td>215.7</td><td>1.67s</td><td>1.19s</td><td>IE9+, Edge, FF?, Chrome ?, Safari ?, Opera ?</td></tr>
-<tr><td><b><a href='https://www.mathjax.org/' target='_blank' title='MathJax homepage'>MathJax+polyfill</a></b><sup>2</sup></td><td>v3.0.5<br/>Mar-2020</td>
+<tr><td><b><a href='https://www.mathjax.org/' target='_blank' title='MathJax homepage'>MathJax+polyfill</a></b><sup>2</sup><br/>[<a href='https://sheffieldnick.github.io/jqmath-vanilla/examples/mathjax.html'>example page</a>]</td><td>v3.0.5<br/>Mar-2020</td>
     <td>15</td><td>291.6</td><td>3.67s</td><td>2.66s</td><td>IE11+, Edge, FF38+, Chrome 29+, Safari 9+, Opera 33+, iOS 9+, Android 4+</td></tr>
 </tbody>
 </table>
