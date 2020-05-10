@@ -24,6 +24,20 @@
 var jsCurry = function() {
 	var sliceMF = Array.prototype.slice;	// slice "Member Function"
 
+	// provide a few basic ECMAScript 5 functions if they are missing:
+  // Chrome < 7, FF < 4, Opera < 11.6, Safari < 5.1, IE < 9
+	if (! Function.prototype.bind) Function.prototype.bind = function(thisArg /* , ... */) {
+    var f = this, args0 = sliceMF.call(arguments, 1);
+    return function(/* ... */) {
+      return f.apply(thisArg, args0.concat(sliceMF.call(arguments, 0)));
+    };
+  };
+  // Chrome < 5, FF < 4, Opera < 10.5, Safari < 5, IE < 9
+	if (! Array.isArray) Array.isArray = function(x) {
+    return typeof x == 'object' && x !== null &&
+      Object.prototype.toString.call(x) === '[object Array]';
+  };
+    
 	function F(x /* , ... */) {	// F() shorthand notation for some basic operations
 		if (typeof x == 'function') return F.curry.apply(undefined, arguments);
 		if (arguments.length == 2) {
@@ -178,14 +192,15 @@ var F; if (F === undefined) F = jsCurry;
 var jqMath = function() {
 	var F = jsCurry;
 
-	// IE6-11 missing these Math functions entirely
-	if (! Math.sign)
-		Math.sign = function(x) {
-			x = Number(x);
-			return x > 0 ? 1 : x < 0 ? -1 : x /* +0, -0, or NaN */;
-		};
-	if (! Math.trunc)
-		Math.trunc = function(x) { return (x < 0 ? Math.ceil : Math.floor)(x); };
+	// Chrome < 38, FF < 25, Opera < 25, Safari < 9, IE6-11
+	if (! Math.sign) Math.sign = function(x) {
+    x = Number(x);
+    return x > 0 ? 1 : x < 0 ? -1 : x /* +0, -0, or NaN */;
+  };
+	// Chrome < 38, FF < 25, Opera < 25, Safari < 9, IE6-11
+	if (! Math.trunc) Math.trunc = function(x) {
+    return (x < 0 ? Math.ceil : Math.floor)(x);
+  };
 
   function M(x, y, z) /* any number of arguments */ {
 		if (typeof x == 'number') x = String(x);	// e.g. for small integers
@@ -1362,9 +1377,11 @@ var jqMath = function() {
 					if (M.hasClass(mx0p, 'ma-repel-adj') || M.hasClass(mx1, 'ma-repel-adj')) {
 						/* setting padding on mx0p or mx1 doesn't work on e.g. <mn> or <mrow>
 							elements in Firefox 3.6.12 */
-						// IE8+
+						// Chrome1+, FF3+, Opera7+, Safari1.1+, IE9+
 						if (! (op && tokP[0] && M.prefix_[op] < 25))
-							mx0p.insertAdjacentElement('afterend', M.spaceMe('.17em', docP_));
+							mx0p.parentNode.insertBefore(M.spaceMe('.17em', docP_), mx0p.nextSibling);
+							// FF48+
+              //mx0p.insertAdjacentElement('afterend', M.spaceMe('.17em', docP_));
 							//JQuery: $(mx0p).after(M.spaceMe('.17em', docP_));
 						M.addClass(e, 'ma-repel-adj');
 					}
