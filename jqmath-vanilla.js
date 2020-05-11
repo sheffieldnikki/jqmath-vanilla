@@ -1590,10 +1590,12 @@ var jqMath = function() {
 				alert(exc);
 			}
 	};
-	if (document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll)) {
+	// FF < 4 doesn't have document.readyState
+	if (document.readyState === "complete" || (document.readyState && document.readyState !== "loading" && !document.documentElement.doScroll)) {
 		dom_loaded();
 	} else {
-		document.addEventListener("DOMContentLoaded", dom_loaded);
+		// FF < 6 requires useCapture param
+		document.addEventListener("DOMContentLoaded", dom_loaded, false);
 	};
 
 	//JQuery: Not used??
