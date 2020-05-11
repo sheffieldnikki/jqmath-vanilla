@@ -15,7 +15,7 @@ jqMath-vanilla is very lightweight (38.1kB total, or 14.6kB Brotli compressed), 
 
 <h2>Using the library</h2>
 
-Copy the CSS and JS file to your server and include them in the <head> section of your page:
+Copy the CSS & JS files to your server, and include them in the `<head>` section of your page:
     
     <!DOCTYPE html>
     <html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
