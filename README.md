@@ -29,7 +29,7 @@ Copy the CSS & JS files to your server, and include them in the `<head>` section
 
 The font stylesheet is only needed if you are using Fraktur letters in your maths.
 
-Full documentation is on the original <a href='https://mathscribe.com/author/jqmath.html' target='_blank'>jqMath homepage</a>.
+See the <a href='https://sheffieldnick.github.io/jqmath-vanilla/examples/jqmath-vanilla.html'>example page</a> for an overview, and full documentation is on the original <a href='https://mathscribe.com/author/jqmath.html' target='_blank'>jqMath homepage</a>.
 
 <h2>Math rendering libraries</h2>
 
