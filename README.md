@@ -1,4 +1,4 @@
-# jqmath-vanilla
+# jQmath-vanilla
 Pure JavaScript version of jqMath math rendering library, so doesn't require jQuery. 
 Forked from jqMath v0.4.6 (May-2016) which is copyright 2016, Mathscribe, Inc. and released under the MIT license.
 
@@ -12,6 +12,24 @@ produces the following:
 ![Example expression](examples/example.png)
 
 jqMath-vanilla is very lightweight (38.1kB total, or 14.6kB Brotli compressed), fast and concise. It is standards-based and cross-browser, using MathML when available, else simple HTML and CSS, and avoiding pixel-map images. Thus pages load quickly, and expressions can be resized by the user, or easily passed to screen reading, graphing, or computer algebra software.
+
+<h2>Using the library</h2>
+
+Copy the CSS and JS file to your server and include them in the <head> section of your page:
+    
+    <!DOCTYPE html>
+    <html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+    <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+    <link rel="stylesheet" href="jqmath-0.4.3.min.css">
+    <script src="jqmath-vanilla.min.js"></script>
+    ...
+    </head>
+
+The font stylesheet is only needed if you are using Fraktur letters in your maths.
+
+Full documentation is on the original <a href='https://mathscribe.com/author/jqmath.html' target='_blank'>jqMath homepage</a>.
 
 <h2>Math rendering libraries</h2>
 
