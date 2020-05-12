@@ -280,7 +280,7 @@ var jqMath = function() {
 	if (M.msieVersion)
 		document.write(
 			'<object id=MathPlayer classid="clsid:32F66A20-7614-11D4-BD11-00104BD3F987">',
-			'</object><','?IMPORT namespace="m" implementation="#MathPlayer" ?>');
+			'</object><?IMPORT namespace="m" implementation="#MathPlayer" ?>');
 	// M.MathPlayer controls whether the IE plugin MathPlayer can be used.
 	function checkMathMLAttrs(e) {
 		if (M.MathML && ! fixMathMLQ_) return e;
