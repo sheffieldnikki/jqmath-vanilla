@@ -370,7 +370,8 @@ var jqMath = function() {
 		var e1 = newMeNS('math', newMeNS('mn', '1')),
 			e2 = newMeNS('math', newMeNS('mfrac', [newMeNS('mn', '1'), newMeNS('mn', '2')])),
 			es$ = document.createElement('div');
-		if (typeof e1.style === 'undefined') return false;
+		// e1.style is set to null in Chrome 24-44 (no MathML support)
+		if (typeof e1.style === 'undefined' || e1.style === null) return false;
 		e1.setAttribute('display', 'block');
 		e2.setAttribute('display', 'block');
 		e1.style.visibility = e2.style.visibility = 'hidden';
