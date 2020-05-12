@@ -11,7 +11,7 @@ produces the following:
 
 ![Example expression](examples/example.png)
 
-jqMath-vanilla is very lightweight (38.1kB total, or 14.6kB Brotli compressed), fast and concise. It is standards-based and cross-browser, using MathML when available, else simple HTML and CSS, and avoiding pixel-map images. Thus pages load quickly, and expressions can be resized by the user, or easily passed to screen reading, graphing, or computer algebra software.
+jqMath-vanilla is very lightweight (38.6kB total, or 14.7kB Brotli compressed), fast and concise. It is standards-based and cross-browser, using MathML when available, else simple HTML and CSS, and avoiding pixel-map images. Thus pages load quickly, and expressions can be resized by the user, or easily passed to screen reading, graphing, or computer algebra software.
 
 <h2>Using the library</h2>
 
@@ -37,7 +37,7 @@ See the <a href='https://sheffieldnick.github.io/jqmath-vanilla/examples/jqmath-
 <thead><tr><th>Math Library</th><th>Release</th><th>HTTP<br/>requests</th><th>Transfer<br/>kB</th><th>First<br/>load</th><th>Cached<br/>load</th><th>Browser support</th></tr></thead>
 <tbody>
 <tr><td><b>jqMath vanilla</b><br/>[<a href='https://sheffieldnick.github.io/jqmath-vanilla/examples/jqmath-vanilla.html'>example page</a>]</td><td><i>n/a</i><br/>May-2020</td>
-    <td>3</td><td>&nbsp;18.3</td><td>0.54s</td><td>0.47s</td><td>IE9+, Edge, FF3.5+, Chrome 14+, Safari 3.1+, Opera 9+</td></tr>
+    <td>3</td><td>&nbsp;18.2</td><td>0.54s</td><td>0.47s</td><td>IE9+, Edge, FF3.5+, Chrome 14+, Safari 3.1+, Opera 9+</td></tr>
 <tr><td><b><a href='https://mathscribe.com/author/jqmath.html' target='_blank' title='jqMath homepage'>jqMath+jQuery</a></b><br/>[<a href='https://sheffieldnick.github.io/jqmath-vanilla/examples/jqmath-jquery.html'>example page</a>]</td><td>v0.4.6<br/>May-2016</td>
     <td>8</td><td>&nbsp;81.9</td><td>1.03s</td><td>0.90s</td><td>IE6+, Edge, FF2+, Chrome 16+, Safari 3+, Opera 9+</td></tr>
 <tr><td><b><a href='https://katex.org/' target='_blank' title='KaTeX homepage'>KaTeX</a></b><sup>1</sup><br/>[<a href='https://sheffieldnick.github.io/jqmath-vanilla/examples/katex.html'>example page</a>]</td><td>v0.11.1<br/>Sep-2019</td>
