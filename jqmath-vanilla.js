@@ -378,7 +378,7 @@ var jqMath = function() {
 		es$.appendChild(e1);
 		es$.appendChild(e2);
 		document.body.appendChild(es$);
-		// IE9+ use .bottom-.top instead of .height for IE4-8
+		// Could use .bottom-.top instead of .height, but IE6-8 don't get this far anyway
 		var res = e2.getBoundingClientRect().height > e1.getBoundingClientRect().height + 2;
 		document.body.removeChild(es$);
 		return res;
@@ -1378,7 +1378,7 @@ var jqMath = function() {
 					if (M.hasClass(mx0p, 'ma-repel-adj') || M.hasClass(mx1, 'ma-repel-adj')) {
 						/* setting padding on mx0p or mx1 doesn't work on e.g. <mn> or <mrow>
 							elements in Firefox 3.6.12 */
-						// Chrome1+, FF3+, Opera7+, Safari1.1+, IE9+
+						// Chrome1+, FF3+, Opera7+, Safari1.1+, IE6+
 						if (! (op && tokP[0] && M.prefix_[op] < 25))
 							mx0p.parentNode.insertBefore(M.spaceMe('.17em', docP_), mx0p.nextSibling);
 							// FF48+
@@ -1580,9 +1580,8 @@ var jqMath = function() {
 	};
 	M.parseMathQ = true;
 
-	// IE9+
 	// https://www.sitepoint.com/jquery-document-ready-plain-javascript/
-	function dom_loaded() {
+	function dom_loaded(event) {
 		if (M.MathML === undefined) M.MathML = M.canMathML();
 		if (M.parseMathQ)
 			try {
@@ -1594,11 +1593,14 @@ var jqMath = function() {
 	// FF < 4 doesn't have document.readyState
 	if (document.readyState === "complete" || (document.readyState && document.readyState !== "loading" && !document.documentElement.doScroll)) {
 		dom_loaded();
-	} else {
+	} else if (window.addEventListener) {
 		// FF < 6 requires useCapture param
 		document.addEventListener("DOMContentLoaded", dom_loaded, false);
-	};
-
+	} else {
+    // IE6-8
+    window.attachEvent("onload", dom_loaded);
+  }
+  
 	//JQuery: Not used??
 	//if ($.fn.parseMath == null)
 	//	$.fn.parseMath = function() { F.iter(M.parseMath, this); return this; };
