@@ -1593,7 +1593,7 @@ var jqMath = function() {
 	// FF < 4 doesn't have document.readyState
 	if (document.readyState === "complete" || (document.readyState && document.readyState !== "loading" && !document.documentElement.doScroll)) {
 		dom_loaded();
-	} else if (window.addEventListener) {
+	} else if (document.addEventListener) {
 		// FF < 6 requires useCapture param
 		document.addEventListener("DOMContentLoaded", dom_loaded, false);
 	} else {
